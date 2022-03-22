@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/21276363/AndroidStudioProjects/JogoDaVelha/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.337037037037037" />
         <entry key="..\:/Users/21276363/AndroidStudioProjects/JogoDaVelha/app/src/main/res/drawable/ic_launcher_background.xml" value="0.337037037037037" />
+        <entry key="..\:/Users/21276363/AndroidStudioProjects/JogoDaVelha/app/src/main/res/font/roboto.xml" value="0.39076923076923076" />
+        <entry key="..\:/Users/21276363/AndroidStudioProjects/JogoDaVelha/app/src/main/res/layout/activity_jogo.xml" value="0.26902173913043476" />
         <entry key="..\:/Users/21276363/AndroidStudioProjects/JogoDaVelha/app/src/main/res/layout/activity_main.xml" value="0.2653985507246377" />
+        <entry key="..\:/Users/21276363/AndroidStudioProjects/JogoDaVelha/app/src/main/res/layout/activity_modo_de_jogo.xml" value="0.25905797101449274" />
       </map>
     </option>
   </component>

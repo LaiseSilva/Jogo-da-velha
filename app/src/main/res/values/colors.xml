@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="botoes">#701359</color>
+    <color name="teste">#C4C4c4</color>
+
 </resources>

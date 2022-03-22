@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="modosDeJogos">
+        <item name="android:layout_width">260dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:backgroundTint">@color/botoes</item>
+        <item name="android:layout_marginBottom">15dp</item>
+
+    </style>
+
+    <style name="titulos">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="quadradinhoDaVelha">
+        <item name="android:layout_width">98dp</item>
+        <item name="android:layout_height">98dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:backgroundTint">@color/botoes</item>
+    </style>
+
+    <style name="quadradinhoInicio">
+        <item name="android:backgroundTint">@color/botoes</item>
+        <item name="android:layout_width">98dp</item>
+        <item name="android:layout_height">98dp</item>
+    </style>
+</resources>

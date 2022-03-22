@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModoDeJogo"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/tela_inicial">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/titulos"
+            android:text="Qual"
+            android:textColor="@color/black"/>
+        <TextView
+            style="@style/titulos"
+            android:layout_marginLeft="80sp"
+            android:text="modo?"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+        android:id="@+id/modoFacil"
+            style="@style/modosDeJogos"
+            android:text="Fácil"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/modoMedio"
+            style="@style/modosDeJogos"
+            android:text="Médio"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/modoDificil"
+            style="@style/modosDeJogos"
+            android:text="Difícil"
+            android:textSize="20dp"/>
+"
+
+    </LinearLayout>
+
+
+</LinearLayout>

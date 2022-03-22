@@ -3,12 +3,9 @@ package com.senai.jogodavelha
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class ModoDeJogo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
-
+        setContentView(R.layout.activity_modo_de_jogo)
     }
 }
