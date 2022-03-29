@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Jogo">
+    tools:context=".JogoActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,20 +17,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-           <ImageView
-               android:layout_width="40dp"
-               android:layout_height="55dp"
-               android:src="@drawable/pessoa"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:src="@drawable/pessoa" />
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="55dp"
-                android:src="@drawable/pessoa"/>
-
-
-
-
-            
+                android:src="@drawable/pessoa" />
         </LinearLayout>
 
     </LinearLayout>
@@ -47,14 +42,17 @@
             android:layout_height="wrap_content">
 
             <Button
-               style="@style/quadradinhoInicio">
+                android:id="@+id/quadrinho1"
+                style="@style/quadradinhoInicio">
             </Button>
 
             <Button
+                android:id="@+id/quadrinho2"
                 style="@style/quadradinhoDaVelha">
             </Button>
 
             <Button
+                android:id="@+id/quadrinho3"
                 style="@style/quadradinhoDaVelha">
             </Button>
 
@@ -66,14 +64,17 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/quadrinho4"
                 style="@style/quadradinhoInicio">
             </Button>
 
             <Button
+                android:id="@+id/quadrinho5"
                 style="@style/quadradinhoDaVelha">
             </Button>
 
             <Button
+                android:id="@+id/quadrinho6"
                 style="@style/quadradinhoDaVelha">
             </Button>
         </LinearLayout>
@@ -83,14 +84,17 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/quadrinho7"
                 style="@style/quadradinhoInicio">
             </Button>
 
             <Button
+                android:id="@+id/quadrinho8"
                 style="@style/quadradinhoDaVelha">
             </Button>
 
             <Button
+                android:id="@+id/quadrinho9"
                 style="@style/quadradinhoDaVelha">
             </Button>
         </LinearLayout>

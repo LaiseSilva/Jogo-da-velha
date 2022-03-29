@@ -17,6 +17,7 @@
     </style>
 
     <style name="quadradinhoDaVelha">
+        <item name="android:textSize">30sp</item>
         <item name="android:layout_width">98dp</item>
         <item name="android:layout_height">98dp</item>
         <item name="android:layout_marginLeft">15dp</item>
@@ -24,6 +25,7 @@
     </style>
 
     <style name="quadradinhoInicio">
+        <item name="android:textSize">30sp</item>
         <item name="android:backgroundTint">@color/botoes</item>
         <item name="android:layout_width">98dp</item>
         <item name="android:layout_height">98dp</item>
