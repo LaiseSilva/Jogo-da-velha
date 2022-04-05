@@ -2,6 +2,7 @@ package com.senai.jogodavelha
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 
 private  var jogador1 = true
@@ -22,54 +23,30 @@ class JogoActivity : AppCompatActivity() {
         val quadradinho7 = findViewById<Button>(R.id.quadrinho7)
         val quadradinho8 = findViewById<Button>(R.id.quadrinho8)
         val quadradinho9 = findViewById<Button>(R.id.quadrinho9)
+        val teste = findViewById<Button>(R.id.teste)
 
 
+        quadradinho1.setOnClickListener( ){ jogar(quadradinho1) }
 
+        quadradinho2.setOnClickListener(){jogar(quadradinho2)}
 
-        quadradinho1.setOnClickListener(){
-            if(jogador1){
-                quadradinho1.text = jogadas()
-            }else{
-                quadradinho1.text = jogadas()
-            }
+        quadradinho3.setOnClickListener(){jogar(quadradinho3)}
 
-            quadradinho1.setEnabled(false)
+        quadradinho4.setOnClickListener(){jogar(quadradinho4)}
 
-        }
+        quadradinho5.setOnClickListener(){jogar(quadradinho5)}
 
-        quadradinho2.setOnClickListener(){
+        quadradinho6.setOnClickListener(){jogar(quadradinho6)}
 
-            if(jogador1){
-                quadradinho2.text = jogadas()
-            }else{
-                quadradinho2.text = jogadas()
-            }
+        quadradinho7.setOnClickListener(){jogar(quadradinho7)}
 
-            quadradinho2.setEnabled(false)
+        quadradinho8.setOnClickListener(){jogar(quadradinho8)}
 
-        }
+        quadradinho9.setOnClickListener(){jogar(quadradinho9)}
 
-        quadradinho3.setOnClickListener(){
-
-            if(jogador1){
-                quadradinho3.text = jogadas()
-            }else{
-                quadradinho3.text = jogadas()
-            }
-
-            quadradinho3.setEnabled(false)
-
-        }
-
-        quadradinho4.setOnClickListener(){
-
-            if(jogador1){
-                quadradinho4.text = jogadas()
-            }else{
-                quadradinho4.text = jogadas()
-            }
-
-            quadradinho4.setEnabled(false)
+        if(quadradinho1.isEnabled == false && quadradinho1.text == "O"){
+            teste.text = "sim"
+        }else{
 
         }
 
@@ -78,8 +55,18 @@ class JogoActivity : AppCompatActivity() {
 
     }
 
+    private fun jogar(quadradinho: Button ) {
+        if(jogador1){
+            quadradinho.text = jogadas()
+        }else{
+            quadradinho.text = jogadas()
+        }
+
+        quadradinho.setEnabled(false)
+    }
+
     private fun jogadas(): String {
-        var simbolozinho =  "X"
+        var simbolozinho =  ""
 
         if(vez == jogador1){
             simbolozinho = "X"
