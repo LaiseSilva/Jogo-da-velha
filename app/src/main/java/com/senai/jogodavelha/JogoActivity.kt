@@ -2,6 +2,7 @@ package com.senai.jogodavelha
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
 
@@ -26,13 +27,13 @@ class JogoActivity : AppCompatActivity() {
         val teste = findViewById<Button>(R.id.teste)
 
 
-        quadradinho1.setOnClickListener( ){ jogar(quadradinho1) }
+        quadradinho1.setOnClickListener(){ jogar(quadradinho1)}
 
         quadradinho2.setOnClickListener(){jogar(quadradinho2)}
 
         quadradinho3.setOnClickListener(){jogar(quadradinho3)}
 
-        quadradinho4.setOnClickListener(){jogar(quadradinho4)}
+        /*quadradinho4.setOnClickListener(){jogar(quadradinho4)}
 
         quadradinho5.setOnClickListener(){jogar(quadradinho5)}
 
@@ -42,19 +43,25 @@ class JogoActivity : AppCompatActivity() {
 
         quadradinho8.setOnClickListener(){jogar(quadradinho8)}
 
-        quadradinho9.setOnClickListener(){jogar(quadradinho9)}
-
-        if(quadradinho1.isEnabled == false && quadradinho1.text == "O"){
-            teste.text = "sim"
-        }else{
-
-        }
+        quadradinho9.setOnClickListener(){jogar(quadradinho9)}*/
 
 
-
+        verificar(quadradinho1,quadradinho2,teste)
 
     }
 
+    /*Função de tentiva para encontrar um ganhador*/
+    private fun verificar(button1: Button, button2: Button, teste: Button){
+
+        if (!button1.isEnabled  && !button2.isEnabled && button2.text.equals(button1.text)){
+            teste.text = "entrei"
+        }else{
+            teste.text="não"
+        }
+    }
+
+
+    /*Função que define as jogadas*/
     private fun jogar(quadradinho: Button ) {
         if(jogador1){
             quadradinho.text = jogadas()
@@ -65,6 +72,7 @@ class JogoActivity : AppCompatActivity() {
         quadradinho.setEnabled(false)
     }
 
+    /* função que define quem joga*/
     private fun jogadas(): String {
         var simbolozinho =  ""
 
