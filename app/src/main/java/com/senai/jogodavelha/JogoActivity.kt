@@ -5,10 +5,12 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
+import java.util.ArrayList
 
 private  var jogador1 = true
 private  var jogador2 = false
 private  var vez = false
+private  var botoesLista = ArrayList<Button>()
 
 class JogoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,40 +28,28 @@ class JogoActivity : AppCompatActivity() {
         val quadradinho9 = findViewById<Button>(R.id.quadrinho9)
         val teste = findViewById<Button>(R.id.teste)
 
+        botoesLista = arrayListOf<Button>(quadradinho1,quadradinho2,quadradinho3,quadradinho4,quadradinho5,quadradinho6,quadradinho7,quadradinho8,quadradinho9)
 
-        quadradinho1.setOnClickListener(){ jogar(quadradinho1)}
-
-        quadradinho2.setOnClickListener(){jogar(quadradinho2)}
-
-        quadradinho3.setOnClickListener(){jogar(quadradinho3)}
-
-        /*quadradinho4.setOnClickListener(){jogar(quadradinho4)}
-
-        quadradinho5.setOnClickListener(){jogar(quadradinho5)}
-
-        quadradinho6.setOnClickListener(){jogar(quadradinho6)}
-
-        quadradinho7.setOnClickListener(){jogar(quadradinho7)}
-
-        quadradinho8.setOnClickListener(){jogar(quadradinho8)}
-
-        quadradinho9.setOnClickListener(){jogar(quadradinho9)}*/
-
-
-        verificar(quadradinho1,quadradinho2,teste)
-
-    }
-
-    /*Função de tentiva para encontrar um ganhador*/
-    private fun verificar(button1: Button, button2: Button, teste: Button){
-
-        if (!button1.isEnabled  && !button2.isEnabled && button2.text.equals(button1.text)){
-            teste.text = "entrei"
-        }else{
-            teste.text="não"
+        for (x in 0..botoesLista.size-1)
+        {
+            botoesLista[x].setOnClickListener{
+                jogar(it as Button)
+            }
         }
     }
 
+    private fun verificar ():Boolean {
+
+
+        if (botoesLista[0].text != "" && botoesLista[1].text != ""  && botoesLista[2].text != ""
+            && botoesLista[0].text == botoesLista[1].text && botoesLista[0].text == botoesLista[2].text)
+            {
+                val teste = findViewById<Button>(R.id.teste)
+                teste.text ="ganhou?"
+
+            }
+        return true
+    }
 
     /*Função que define as jogadas*/
     private fun jogar(quadradinho: Button ) {
@@ -79,10 +69,24 @@ class JogoActivity : AppCompatActivity() {
         if(vez == jogador1){
             simbolozinho = "X"
             vez = false
+            verificar()
+
         }else if(vez == jogador2){
+
             simbolozinho = "O"
             vez = true
+            verificar()
+
         }
+
         return simbolozinho
+    }
+
+    private fun fimDeJogo()
+    {
+        for (x in 0..botoesLista.size-1)
+        {
+            botoesLista[x].setEnabled(false)
+        }
     }
 }
